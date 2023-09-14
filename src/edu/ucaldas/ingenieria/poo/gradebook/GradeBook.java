@@ -2,9 +2,31 @@ package edu.ucaldas.ingenieria.poo.gradebook;
 
 public class GradeBook {
 	
-	public void displayMessage(String course)
+	private String courseName;
+	//Zona constructores
+	public GradeBook()
 	{
-		System.out.print(" hello from GadeBook class " + course);
+		
 	}
+
+	/**
+	 * @param courseName
+	 */
+	public GradeBook(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public void displayMessage(String course)
+	 {
+		System.out.print(" hello from GadeBook class " + getCourseName());
+	 }
 
 }
